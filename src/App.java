@@ -1,6 +1,4 @@
-import javax.swing.*;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class App {
@@ -10,10 +8,12 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         String texto = scanner.nextLine();
-        texto = texto.toLowerCase();
+//        texto = texto.toLowerCase();
 
-        List<String> frase = Arrays.asList(texto.split(" "));
-
-        frase.stream().distinct().sorted(String::compareTo).forEach(System.out::println);
+        Arrays.stream(texto.split(" "))
+                .map(String::toLowerCase)
+                .distinct()
+                .sorted()
+                .forEach(System.out::println);
     }
 }
