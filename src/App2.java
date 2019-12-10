@@ -27,5 +27,13 @@ public class App2 {
 
         System.out.println("Únicos");
         System.out.println(numeros.stream().distinct().sorted().collect(Collectors.toList()));
+
+//        System.out.println(
+//                new Random()
+//                        .ints(30, 1, 101)
+//                        .filter(n -> n%2==0)
+//                        .boxed()
+//                        .collect(Collectors.toList())
+//        );
     }
 }
